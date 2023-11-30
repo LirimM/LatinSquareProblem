@@ -4,8 +4,12 @@
     {
         public static void Main(string[] args)
         {
-            Solve(5, false);
+            Console.Write("Input n: ");
+            int n = int.Parse(Console.ReadLine()!);
+
+            Solve(n, true);
         }
+
         public static void Solve(int n, bool enableForwardChecking = false)
         {
             int[,] latinSquare = new int[n, n];
@@ -74,7 +78,6 @@
 
             return true;
         }
-
 
         static void PrintMatrix(int[,] latinSquare, int N)
         {
